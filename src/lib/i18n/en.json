@@ -1,0 +1,45 @@
+{
+  "nav": {
+    "dashboard": "Dashboard",
+    "quizzes": "Quizzes",
+    "classes": "Classes"
+  },
+  "action": {
+    "signout": "Sign Out",
+    "login": "Log In",
+    "signup": "Sign Up",
+    "create": "Create",
+    "finish": "Finish"
+  },
+  "form": {
+    "username": "Username",
+    "password": "Password",
+    "email": "E-mail"
+  },
+  "title": {
+    "dashboard": "Welcome back, {username}!"
+  },
+  "label": {
+    "name": "Name",
+    "class_name": "Class name",
+    "quiz_name": "Quiz name"
+  },
+  "quiz": {
+    "draft": "Draft Quiz",
+    "new_content_part": "New content section",
+    "new_interact_bool": "New yes/no question",
+    "part_title": "Section title",
+    "part_text": "Section content",
+    "question": "Question",
+    "answer_yes": "Yes",
+    "answer_no": "No",
+    "error": {
+      "blank_name": "Quiz name can't be empty!",
+      "no_parts": "Quiz has no content or questions!"
+    }
+  },
+  "class": {
+    "create": "Create Class",
+    "draft": "Draft Class"
+  }
+}

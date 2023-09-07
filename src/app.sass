@@ -1,0 +1,110 @@
+:root
+    --nav-width-collapsed: 3rem
+    --nav-width-expanded: 17rem
+
+    --color-bg: #eee
+    --color-fg: #232023
+
+    --color-accent-hue: 90
+    --color-accent-saturation: 55%
+
+    --color-accent-50: hsl(var(--color-accent-hue), var(--color-accent-saturation), 5%)
+    --color-accent-100: hsl(var(--color-accent-hue), var(--color-accent-saturation), 10%)
+    --color-accent-200: hsl(var(--color-accent-hue), var(--color-accent-saturation), 15%)
+    --color-accent-300: hsl(var(--color-accent-hue), var(--color-accent-saturation), 30%)
+    --color-accent-400: hsl(var(--color-accent-hue), var(--color-accent-saturation), 45%)
+    --color-accent-500: hsl(var(--color-accent-hue), var(--color-accent-saturation), 50%)
+    --color-accent-550: hsl(var(--color-accent-hue), var(--color-accent-saturation), 60%)
+    --color-accent-600: hsl(var(--color-accent-hue), var(--color-accent-saturation), 70%)
+    --color-accent-700: hsl(var(--color-accent-hue), var(--color-accent-saturation), 80%)
+    --color-accent-750: hsl(var(--color-accent-hue), var(--color-accent-saturation), 85%)
+    --color-accent-800: hsl(var(--color-accent-hue), var(--color-accent-saturation), 90%)
+    --color-accent-900: hsl(var(--color-accent-hue), var(--color-accent-saturation), 95%)
+
+    --color-error-hue: 0
+    --color-error-saturation: 55%
+    --color-error-50: hsl(var(--color-error-hue), var(--color-error-saturation), 5%)
+    --color-error-100: hsl(var(--color-error-hue), var(--color-error-saturation), 10%)
+    --color-error-200: hsl(var(--color-error-hue), var(--color-error-saturation), 15%)
+    --color-error-300: hsl(var(--color-error-hue), var(--color-error-saturation), 30%)
+    --color-error-400: hsl(var(--color-error-hue), var(--color-error-saturation), 45%)
+    --color-error-500: hsl(var(--color-error-hue), var(--color-error-saturation), 50%)
+    --color-error-550: hsl(var(--color-error-hue), var(--color-error-saturation), 60%)
+    --color-error-600: hsl(var(--color-error-hue), var(--color-error-saturation), 70%)
+    --color-error-700: hsl(var(--color-error-hue), var(--color-error-saturation), 80%)
+    --color-error-750: hsl(var(--color-error-hue), var(--color-error-saturation), 85%)
+    --color-error-800: hsl(var(--color-error-hue), var(--color-error-saturation), 90%)
+    --color-error-900: hsl(var(--color-error-hue), var(--color-error-saturation), 95%)
+
+    --color-bg-elevated: #ddd
+    --color-bg-elevated-1: #ccc
+    --color-bg-elevated-2: #bbb
+
+    --text-tiny: 0.2rem
+    --text-small: 0.5rem
+    --text-medium: 1rem
+    --text-large: 1.5rem
+    --text-huge: 2rem
+
+    --gap-tiny: 0.2rem
+    --gap-small: 0.5rem
+    --gap-medium: 1rem
+    --gap-large: 1.5rem
+    --gap-huge: 2rem
+
+#app
+    display: grid
+    grid-template-columns: auto 1fr
+    min-height: 100svh
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+body
+    background-color: var(--color-bg)
+    color: var(--color-fg)
+    overflow-y: hidden
+
+h1,h2,h3
+    color: var(--color-accent-50)
+h4,h5,h6
+    color: var(--color-accent-100)
+
+.button,
+button,
+input[type="submit"]
+    text-align: center
+    text-decoration: none
+    color: var(--color-accent-100)
+
+    background-color: var(--color-accent-700)
+    border: 2px solid var(--color-accent-300)
+    border-radius: 1ch
+    padding: 0.5ch
+    user-select: none
+
+    &:hover
+        background-color: var(--color-accent-750)
+    &:active
+        background-color: var(--color-accent-800)
+        border-color: var(--color-accent-400)
+
+    &.error
+        background-color: var(--color-error-700)
+        border: 2px solid var(--color-error-300)
+        &:hover
+            background-color: var(--color-error-750)
+        &:active
+            background-color: var(--color-error-800)
+            border-color: var(--color-error-400)
+
+.content-field
+    display: inline-block
+    min-width: 10ch
+    background: none
+    border: none
+    border-bottom: 2px solid var(--color-fg)
+    word-break: break-all
+    outline: none

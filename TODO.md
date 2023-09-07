@@ -1,0 +1,23 @@
+- [ ] Login & logout
+  - [ ] User data model (role)
+  - [ ] Buttons to open /login /signup
+  - [ ] Pages to do such things
+  - [ ] Button to logout
+- [ ] Conditional renders
+  - [ ] If not log in then home different to ask to create user
+  - [ ] If not log in then things not visible on nav
+  - [ ] If not teacher, can't create quiz
+    - [ ] Deny route access, don't hide?
+- [ ] Create quiz if teacher
+  - [ ] Yes/no quiz only
+- [ ] List quizzes
+- [ ] Create class if teacher
+- [ ] List classes
+- [ ] Add quiz to class
+- [ ] Add students to class
+- [ ] Class details page
+
+# Non goals
+- [ ] Responsiveness & mobile support
+- [ ] Different question types
+- [ ] Start frontend from scratch again (you've done it 4 times already)
