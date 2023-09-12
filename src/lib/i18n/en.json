@@ -25,6 +25,7 @@
     "quiz_name": "Quiz name"
   },
   "quiz": {
+    "desc": "Description",
     "draft": "Draft Quiz",
     "new_content_part": "New content section",
     "new_interact_bool": "New yes/no question",

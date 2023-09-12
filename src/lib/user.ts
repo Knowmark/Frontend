@@ -1,6 +1,7 @@
 import { writable } from "svelte/store";
 import { type UserResponse } from "./api";
 import { API_V1 } from "./const";
+import { push } from "svelte-spa-router";
 
 export interface User extends UserResponse {}
 
@@ -17,6 +18,9 @@ user.subscribe((u) => {
 });
 
 export function logout() {
+  push("/");
   user.set(null);
-  API_V1.userLogout();
+  API_V1.userLogout({
+    withCredentials: true,
+  });
 }

@@ -213,216 +213,6 @@ export const AnswerChoiceOneOf5TEnum = {
 export type AnswerChoiceOneOf5TEnum = typeof AnswerChoiceOneOf5TEnum[keyof typeof AnswerChoiceOneOf5TEnum];
 
 /**
- * @type AnswerKind
- * @export
- */
-export type AnswerKind = AnswerKindOneOf | AnswerKindOneOf1 | AnswerKindOneOf2 | AnswerKindOneOf3 | AnswerKindOneOf4 | AnswerKindOneOf5 | AnswerKindOneOf6 | AnswerKindOneOf7;
-
-/**
- * 
- * @export
- * @interface AnswerKindOneOf
- */
-export interface AnswerKindOneOf {
-    /**
-     * 
-     * @type {string}
-     * @memberof AnswerKindOneOf
-     */
-    't': AnswerKindOneOfTEnum;
-}
-
-export const AnswerKindOneOfTEnum = {
-    Bool: 'Bool'
-} as const;
-
-export type AnswerKindOneOfTEnum = typeof AnswerKindOneOfTEnum[keyof typeof AnswerKindOneOfTEnum];
-
-/**
- * 
- * @export
- * @interface AnswerKindOneOf1
- */
-export interface AnswerKindOneOf1 {
-    /**
-     * 
-     * @type {string}
-     * @memberof AnswerKindOneOf1
-     */
-    't': AnswerKindOneOf1TEnum;
-}
-
-export const AnswerKindOneOf1TEnum = {
-    Number: 'Number'
-} as const;
-
-export type AnswerKindOneOf1TEnum = typeof AnswerKindOneOf1TEnum[keyof typeof AnswerKindOneOf1TEnum];
-
-/**
- * 
- * @export
- * @interface AnswerKindOneOf2
- */
-export interface AnswerKindOneOf2 {
-    /**
-     * 
-     * @type {string}
-     * @memberof AnswerKindOneOf2
-     */
-    't': AnswerKindOneOf2TEnum;
-}
-
-export const AnswerKindOneOf2TEnum = {
-    Short: 'Short'
-} as const;
-
-export type AnswerKindOneOf2TEnum = typeof AnswerKindOneOf2TEnum[keyof typeof AnswerKindOneOf2TEnum];
-
-/**
- * 
- * @export
- * @interface AnswerKindOneOf3
- */
-export interface AnswerKindOneOf3 {
-    /**
-     * 
-     * @type {string}
-     * @memberof AnswerKindOneOf3
-     */
-    't': AnswerKindOneOf3TEnum;
-}
-
-export const AnswerKindOneOf3TEnum = {
-    Long: 'Long'
-} as const;
-
-export type AnswerKindOneOf3TEnum = typeof AnswerKindOneOf3TEnum[keyof typeof AnswerKindOneOf3TEnum];
-
-/**
- * 
- * @export
- * @interface AnswerKindOneOf4
- */
-export interface AnswerKindOneOf4 {
-    /**
-     * 
-     * @type {string}
-     * @memberof AnswerKindOneOf4
-     */
-    't': AnswerKindOneOf4TEnum;
-}
-
-export const AnswerKindOneOf4TEnum = {
-    FillIn: 'FillIn'
-} as const;
-
-export type AnswerKindOneOf4TEnum = typeof AnswerKindOneOf4TEnum[keyof typeof AnswerKindOneOf4TEnum];
-
-/**
- * 
- * @export
- * @interface AnswerKindOneOf5
- */
-export interface AnswerKindOneOf5 {
-    /**
-     * 
-     * @type {string}
-     * @memberof AnswerKindOneOf5
-     */
-    't': AnswerKindOneOf5TEnum;
-    /**
-     * 
-     * @type {Array<Array<AnswerKindOneOf5ValueInnerInner>>}
-     * @memberof AnswerKindOneOf5
-     */
-    'value': Array<Array<AnswerKindOneOf5ValueInnerInner>>;
-}
-
-export const AnswerKindOneOf5TEnum = {
-    Match: 'Match'
-} as const;
-
-export type AnswerKindOneOf5TEnum = typeof AnswerKindOneOf5TEnum[keyof typeof AnswerKindOneOf5TEnum];
-
-/**
- * 
- * @export
- * @interface AnswerKindOneOf5ValueInnerInner
- */
-export interface AnswerKindOneOf5ValueInnerInner {
-}
-/**
- * 
- * @export
- * @interface AnswerKindOneOf6
- */
-export interface AnswerKindOneOf6 {
-    /**
-     * 
-     * @type {string}
-     * @memberof AnswerKindOneOf6
-     */
-    't': AnswerKindOneOf6TEnum;
-    /**
-     * 
-     * @type {AnswerKindOneOf6Value}
-     * @memberof AnswerKindOneOf6
-     */
-    'value': AnswerKindOneOf6Value;
-}
-
-export const AnswerKindOneOf6TEnum = {
-    Single: 'Single'
-} as const;
-
-export type AnswerKindOneOf6TEnum = typeof AnswerKindOneOf6TEnum[keyof typeof AnswerKindOneOf6TEnum];
-
-/**
- * 
- * @export
- * @interface AnswerKindOneOf6Value
- */
-export interface AnswerKindOneOf6Value {
-    /**
-     * 
-     * @type {Array<string>}
-     * @memberof AnswerKindOneOf6Value
-     */
-    'options': Array<string>;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof AnswerKindOneOf6Value
-     */
-    'shuffle'?: boolean;
-}
-/**
- * 
- * @export
- * @interface AnswerKindOneOf7
- */
-export interface AnswerKindOneOf7 {
-    /**
-     * 
-     * @type {string}
-     * @memberof AnswerKindOneOf7
-     */
-    't': AnswerKindOneOf7TEnum;
-    /**
-     * 
-     * @type {AnswerKindOneOf6Value}
-     * @memberof AnswerKindOneOf7
-     */
-    'value': AnswerKindOneOf6Value;
-}
-
-export const AnswerKindOneOf7TEnum = {
-    Multiple: 'Multiple'
-} as const;
-
-export type AnswerKindOneOf7TEnum = typeof AnswerKindOneOf7TEnum[keyof typeof AnswerKindOneOf7TEnum];
-
-/**
  * @type AnswerValidation
  * @export
  */
@@ -611,6 +401,38 @@ export type ClassRole = typeof ClassRole[keyof typeof ClassRole];
 
 
 /**
+ * @type PartAnswer
+ * @export
+ */
+export type PartAnswer = PartAnswerOneOf;
+
+/**
+ * 
+ * @export
+ * @interface PartAnswerOneOf
+ */
+export interface PartAnswerOneOf {
+    /**
+     * 
+     * @type {PartAnswerOneOfBool}
+     * @memberof PartAnswerOneOf
+     */
+    'Bool': PartAnswerOneOfBool;
+}
+/**
+ * 
+ * @export
+ * @interface PartAnswerOneOfBool
+ */
+export interface PartAnswerOneOfBool {
+    /**
+     * 
+     * @type {boolean}
+     * @memberof PartAnswerOneOfBool
+     */
+    'answer': boolean;
+}
+/**
  * Implements [RFC7807](https://tools.ietf.org/html/rfc7807).
  * @export
  * @interface Problem
@@ -647,6 +469,12 @@ export interface Problem {
      */
     'type_uri': string;
 }
+/**
+ * @type QuestionKind
+ * @export
+ */
+export type QuestionKind = PartAnswerOneOf;
+
 /**
  * 
  * @export
@@ -745,6 +573,86 @@ export interface Quiz {
     'time_limit'?: string | null;
 }
 /**
+ * 
+ * @export
+ * @interface QuizAnswers
+ */
+export interface QuizAnswers {
+    /**
+     * 
+     * @type {{ [key: string]: PartAnswer; }}
+     * @memberof QuizAnswers
+     */
+    'answers': { [key: string]: PartAnswer; };
+    /**
+     * 
+     * @type {string}
+     * @memberof QuizAnswers
+     */
+    'date'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof QuizAnswers
+     */
+    'user': string;
+}
+/**
+ * 
+ * @export
+ * @interface QuizListResponse
+ */
+export interface QuizListResponse {
+    /**
+     * 
+     * @type {string}
+     * @memberof QuizListResponse
+     */
+    'author'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof QuizListResponse
+     */
+    'close_on'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof QuizListResponse
+     */
+    'created'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof QuizListResponse
+     */
+    'desc'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof QuizListResponse
+     */
+    'id': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof QuizListResponse
+     */
+    'name': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof QuizListResponse
+     */
+    'open_on'?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof QuizListResponse
+     */
+    'time_limit'?: string | null;
+}
+/**
  * @type QuizPart
  * @export
  */
@@ -771,65 +679,47 @@ export interface QuizPartOneOf {
 export interface QuizPartOneOf1 {
     /**
      * 
-     * @type {QuizPartOneOf1Interact}
+     * @type {QuizPartOneOf1Question}
      * @memberof QuizPartOneOf1
      */
-    'Interact': QuizPartOneOf1Interact;
+    'Question': QuizPartOneOf1Question;
 }
 /**
  * 
  * @export
- * @interface QuizPartOneOf1Interact
+ * @interface QuizPartOneOf1Question
  */
-export interface QuizPartOneOf1Interact {
-    /**
-     * 
-     * @type {Array<AnswerChoice>}
-     * @memberof QuizPartOneOf1Interact
-     */
-    'choices'?: Array<AnswerChoice>;
+export interface QuizPartOneOf1Question {
     /**
      * 
      * @type {string}
-     * @memberof QuizPartOneOf1Interact
+     * @memberof QuizPartOneOf1Question
      */
     'id'?: string;
     /**
      * 
-     * @type {AnswerKind}
-     * @memberof QuizPartOneOf1Interact
+     * @type {QuestionKind}
+     * @memberof QuizPartOneOf1Question
      */
-    'kind': AnswerKind;
+    'kind': QuestionKind;
     /**
      * Allow partial answers
      * @type {boolean}
-     * @memberof QuizPartOneOf1Interact
+     * @memberof QuizPartOneOf1Question
      */
     'partial'?: boolean;
     /**
      * 
      * @type {string}
-     * @memberof QuizPartOneOf1Interact
+     * @memberof QuizPartOneOf1Question
      */
     'text': string;
     /**
      * 
      * @type {string}
-     * @memberof QuizPartOneOf1Interact
+     * @memberof QuizPartOneOf1Question
      */
     'time_limit'?: string | null;
-    /**
-     * 
-     * @type {AnswerValidation}
-     * @memberof QuizPartOneOf1Interact
-     */
-    'validation'?: AnswerValidation | null;
-    /**
-     * 
-     * @type {number}
-     * @memberof QuizPartOneOf1Interact
-     */
-    'value': number;
 }
 /**
  * 
@@ -930,6 +820,25 @@ export interface UserResponse {
 }
 
 
+/**
+ * 
+ * @export
+ * @interface ValidationResult
+ */
+export interface ValidationResult {
+    /**
+     * 
+     * @type {number}
+     * @memberof ValidationResult
+     */
+    'correct_answers': number;
+    /**
+     * 
+     * @type {number}
+     * @memberof ValidationResult
+     */
+    'total_questions': number;
+}
 
 /**
  * V1Api - axios parameter creator
@@ -1159,6 +1068,50 @@ export const V1ApiAxiosParamCreator = function (configuration?: Configuration) {
             };
         },
         /**
+         * Submit quiz answers
+         * @summary Submit quiz answers
+         * @param {string} id 
+         * @param {QuizAnswers} quizAnswers 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        quizSubmitAnswers: async (id: string, quizAnswers: QuizAnswers, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('quizSubmitAnswers', 'id', id)
+            // verify required parameter 'quizAnswers' is not null or undefined
+            assertParamExists('quizSubmitAnswers', 'quizAnswers', quizAnswers)
+            const localVarPath = `/api/v1/quiz/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication jwt required
+            // http bearer authentication required
+            await setBearerAuthToObject(localVarHeaderParameter, configuration)
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(quizAnswers, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * Create a user
          * @summary Create a user
          * @param {string} email 
@@ -1290,6 +1243,40 @@ export const V1ApiAxiosParamCreator = function (configuration?: Configuration) {
             };
         },
         /**
+         * Get list of users
+         * @summary Get list of users
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        userList: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/v1/user`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication jwt required
+            // http bearer authentication required
+            await setBearerAuthToObject(localVarHeaderParameter, configuration)
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -1379,7 +1366,7 @@ export const V1ApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async quizInfo(id: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<UserResponse>> {
+        async quizInfo(id: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Quiz>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.quizInfo(id, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -1389,8 +1376,20 @@ export const V1ApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async quizList(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+        async quizList(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<QuizListResponse>>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.quizList(options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * Submit quiz answers
+         * @summary Submit quiz answers
+         * @param {string} id 
+         * @param {QuizAnswers} quizAnswers 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async quizSubmitAnswers(id: string, quizAnswers: QuizAnswers, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ValidationResult>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.quizSubmitAnswers(id, quizAnswers, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -1426,6 +1425,16 @@ export const V1ApiFp = function(configuration?: Configuration) {
          */
         async userGet(id: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<UserResponse>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.userGet(id, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * Get list of users
+         * @summary Get list of users
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async userList(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<UserResponse>>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.userList(options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -1494,7 +1503,7 @@ export const V1ApiFactory = function (configuration?: Configuration, basePath?: 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        quizInfo(id: string, options?: any): AxiosPromise<UserResponse> {
+        quizInfo(id: string, options?: any): AxiosPromise<Quiz> {
             return localVarFp.quizInfo(id, options).then((request) => request(axios, basePath));
         },
         /**
@@ -1503,8 +1512,19 @@ export const V1ApiFactory = function (configuration?: Configuration, basePath?: 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        quizList(options?: any): AxiosPromise<void> {
+        quizList(options?: any): AxiosPromise<Array<QuizListResponse>> {
             return localVarFp.quizList(options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Submit quiz answers
+         * @summary Submit quiz answers
+         * @param {string} id 
+         * @param {QuizAnswers} quizAnswers 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        quizSubmitAnswers(id: string, quizAnswers: QuizAnswers, options?: any): AxiosPromise<ValidationResult> {
+            return localVarFp.quizSubmitAnswers(id, quizAnswers, options).then((request) => request(axios, basePath));
         },
         /**
          * Create a user
@@ -1537,6 +1557,15 @@ export const V1ApiFactory = function (configuration?: Configuration, basePath?: 
          */
         userGet(id: string, options?: any): AxiosPromise<UserResponse> {
             return localVarFp.userGet(id, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Get list of users
+         * @summary Get list of users
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        userList(options?: any): AxiosPromise<Array<UserResponse>> {
+            return localVarFp.userList(options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -1628,6 +1657,19 @@ export class V1Api extends BaseAPI {
     }
 
     /**
+     * Submit quiz answers
+     * @summary Submit quiz answers
+     * @param {string} id 
+     * @param {QuizAnswers} quizAnswers 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof V1Api
+     */
+    public quizSubmitAnswers(id: string, quizAnswers: QuizAnswers, options?: AxiosRequestConfig) {
+        return V1ApiFp(this.configuration).quizSubmitAnswers(id, quizAnswers, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
      * Create a user
      * @summary Create a user
      * @param {string} email 
@@ -1663,6 +1705,17 @@ export class V1Api extends BaseAPI {
      */
     public userGet(id: string, options?: AxiosRequestConfig) {
         return V1ApiFp(this.configuration).userGet(id, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Get list of users
+     * @summary Get list of users
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof V1Api
+     */
+    public userList(options?: AxiosRequestConfig) {
+        return V1ApiFp(this.configuration).userList(options).then((request) => request(this.axios, this.basePath));
     }
 
     /**

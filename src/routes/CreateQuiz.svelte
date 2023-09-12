@@ -2,18 +2,25 @@
   import { onMount } from "svelte";
   import { _ } from "../lib/i18n";
   import QuestionEdit from "../components/QuestionEdit.svelte";
-  import { PartType } from "../lib/wip";
+  import { PartTypeName, QuestionTypeName, part_defaults } from "../lib/wip";
   import { error } from "../lib/log";
   import { API_V1 } from "../lib/const";
   import type { Quiz } from "../lib/api";
+  import { user } from "../lib/user";
+  import { TextArea } from "carbon-components-svelte";
+  import { push } from "svelte-spa-router";
 
   var quizTitle = $_("quiz.draft");
+
+  var quizDesc = "";
 
   var parts = [];
 
   function toData(): Quiz {
     return {
       name: quizTitle,
+      desc: quizDesc,
+      author: $user.id,
       parts,
     };
   }
@@ -27,6 +34,7 @@
     if (!loaded) return;
     loaded = JSON.parse(loaded) as Record<string, any>;
     quizTitle = loaded.name;
+    quizDesc = loaded.desc;
     parts = loaded.parts;
   }
 
@@ -36,33 +44,20 @@
     storeData();
   }
 
-  function onPartChange(e: any) {
-    const data = e.detail;
-    if (data.type != null) {
-      parts[data.index] = data;
-    } else {
-      let new_sections = [];
-      for (const section of parts) {
-        if (section.index === data.index) continue;
-        let index = section.index;
-        if (index > data.index) index--;
-        new_sections.push({ ...section, index });
-      }
-      parts = new_sections;
-    }
-    storeData();
+  function createPart(
+    part_kind: PartTypeName,
+    question_type?: QuestionTypeName
+  ) {
+    return () => {
+      parts = [...parts, part_defaults(part_kind, question_type)];
+      storeData();
+    };
   }
 
-  function createPart(kind: PartType) {
+  function removePart(index: number) {
     return () => {
-      parts = [
-        ...parts,
-        {
-          index: parts.length,
-          type: kind,
-        },
-      ];
-      storeData();
+      parts.splice(index, 1);
+      parts = parts;
     };
   }
 
@@ -80,14 +75,30 @@
     return errors.length === 0;
   }
 
+  let saveInterval;
+
   function createQuiz() {
     if (!validateQuiz()) return;
 
-    API_V1.quizCreate(toData());
+    API_V1.quizCreate(toData()).then(() => {
+      if (saveInterval) clearInterval(saveInterval);
+      saveInterval = null;
+      localStorage.removeItem("new_quiz");
+      push("/quiz");
+    });
   }
 
   onMount(() => {
     loadData();
+
+    saveInterval = setInterval(() => {
+      storeData();
+    }, 5000);
+
+    return () => {
+      if (saveInterval) clearInterval(saveInterval);
+      saveInterval = null;
+    };
   });
 </script>
 
@@ -104,15 +115,17 @@
     />
   </h1>
 
-  {#each parts as section (section)}
-    <QuestionEdit data={section} on:change={onPartChange} />
+  <TextArea bind:value={quizDesc} labelText={$_("quiz.desc")} />
+
+  {#each parts as section, i (section)}
+    <QuestionEdit bind:data={section} on:remove={removePart(i)} />
   {/each}
 
   <div class="pick-kind">
-    <button on:click={createPart(PartType.Content)}
+    <button on:click={createPart(PartTypeName.Content)}
       >{$_("quiz.new_content_part")}</button
     >
-    <button on:click={createPart(PartType.Interact)}
+    <button on:click={createPart(PartTypeName.Question, QuestionTypeName.Bool)}
       >{$_("quiz.new_interact_bool")}</button
     >
   </div>
@@ -134,9 +147,12 @@
   flex-direction: column
   gap: var(--gap-small)
 
+.pick-kind
+  justify-content: center
+
 h1
-    display: flex
-    gap: 1ch
+  display: flex
+  gap: 1ch
 
 .errors
   margin: var(--gap-small) var(--gap-large)

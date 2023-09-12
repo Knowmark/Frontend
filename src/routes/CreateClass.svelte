@@ -2,7 +2,7 @@
   import { onMount } from "svelte";
   import { _ } from "../lib/i18n";
   import QuestionEdit from "../components/QuestionEdit.svelte";
-  import { PartType } from "../lib/wip";
+  import { PartTypeName } from "../lib/wip";
   import { error } from "../lib/log";
   import { API_V1 } from "../lib/const";
   import type { Quiz } from "../lib/api";
